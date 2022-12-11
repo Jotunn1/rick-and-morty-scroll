@@ -9,7 +9,7 @@ const CharactersList = () => {
 
     if (status === 'loading') return <Loader />;
     if (status === 'error') return <h4>Ups!, {`${error}`}</h4>;
-    console.log(characters)
+
     return (
         <InfiniteScroll dataLength={characters ? characters.results.length : 0}
             next={() => fetchNextPage()}
